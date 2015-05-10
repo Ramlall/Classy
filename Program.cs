@@ -9,8 +9,10 @@ class Program
 		gen=new PrimeGen();		// Now gen points to a real instance PrimeGen on heap
 
 		gen.PrintPrimes(10);	// Print out the first 10 primes
-
+		
 		// The object that gen points will be eventually destroyed
 		// by the garbage collector automatically sometime in the future
+
+		UnitTestTariq.CheckIsPrime(); // Runs unit test for IsPrime in PrimeGenTariq.cs
 		}
     }
