@@ -12,12 +12,14 @@ public partial class PrimeGen
         
 		if (n>1)
 			{
-			for(int k = 2; k <= n; n++) // Scroll through numbers between 1 and n.
-				{ 
+			for(int k = 2; k <= n; k++) // Scroll through numbers between 1 and n.
+				{
 				if (n == k) // If we reach the end of the loop, the number satisfies the prime condition.
 					return true;
-				if ((n/k)%1 == 0) // If you divide n by some smaller number and the result is a whole number, prime test fails.
+				if (n%k == 0) // If you divide n by some smaller number and the result is a whole number, prime test fails.
+					{
 					break;
+					}
 				}
 			}
 		return false;
