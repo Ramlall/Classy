@@ -12,7 +12,5 @@ class Program
 		
 		// The object that gen points will be eventually destroyed
 		// by the garbage collector automatically sometime in the future
-
-		UnitTestTariq.CheckIsPrime(); // Runs unit test for IsPrime in PrimeGenTariq.cs
 		}
     }
