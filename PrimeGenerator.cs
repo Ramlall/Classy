@@ -24,18 +24,11 @@ public class PrimeGenerator
 	// Print out the first n primes
 	public void PrintPrimes(int n)
 		{
-		int primecount=0;
-		for(int i=0;i>0;++i)
+		List<int> ListOfPrimes = GetPrimes(n);
+		for(int z = 0; z < n; z++)
 			{
-			if(IsPrime(i)==false) { continue; }
-
-			primecount = primecount + 1;
-			System.Console.Write(" {0} ",i);
-
-			if(primecount>=n) { break; }
-			}
-
-		System.Console.WriteLine();
+			System.Console.WriteLine(ListOfPrimes[z]);
+			}	
 		}
 
 
@@ -45,10 +38,14 @@ public class PrimeGenerator
 		// Return the first n primes
 		List<int> PrimeList = new List<int>();
 
-		for (int k = 0; k <= n; k++)
+		for (int k = 0; k <= k + 1; k++) // Forever for-loop.
 			{
 			if (IsPrime(k) == true)
-				{ PrimeList.Add(k); }
+				{ 
+				PrimeList.Add(k); 
+				if (PrimeList.Count == n)
+					{ break; }
+				}
 			}
 		return PrimeList;
 		}
