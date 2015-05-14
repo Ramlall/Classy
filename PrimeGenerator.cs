@@ -43,9 +43,15 @@ public class PrimeGenerator
 	public List<int> GetPrimes(int n)
 		{
 		// Return the first n primes
-		return null;
-		}
+		List<int> PrimeList = new List<int>();
 
+		for (int k = 0; k <= n; k++)
+			{
+			if (IsPrime(k) == true)
+				{ PrimeList.Add(k); }
+			}
+		return PrimeList;
+		}
 
 	//////////////////////////////////////////
 	public PrimeGenerator()
