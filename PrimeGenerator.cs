@@ -4,7 +4,6 @@ using System.Collections.Generic;
 /////////////////////////////////////////////
 public class PrimeGenerator
 	{
-
 	//////////////////////////////////////////
 	// Check if number n is prime
 	public bool IsPrime(int n)
@@ -38,7 +37,7 @@ public class PrimeGenerator
 		// Return the first n primes
 		List<int> PrimeList = new List<int>();
 
-		for (int k = 0; k <= k + 1; k++) // Forever for-loop.
+		for (int k = 0;   ; k++) // Forever for-loop.
 			{
 			if (IsPrime(k) == true)
 				{ 
@@ -47,14 +46,17 @@ public class PrimeGenerator
 					{ break; }
 				}
 			}
+
 		return PrimeList;
 		}
+
 
 	//////////////////////////////////////////
 	public PrimeGenerator()
 		{
 		// Nothing Here Yet
 		}
+
 
 	/////////////////////////////////////////
 	~PrimeGenerator()
