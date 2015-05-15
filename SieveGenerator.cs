@@ -31,18 +31,9 @@ public class SieveGenerator
 		{
 		List<Number> InitList = new List<Number>();
 
-		for(int k = 0; k < n; k++)
-			{
-			InitList[k].number = (k + 2); // Our list starts at number 2.
-			// @@@@@@@@@@@@@@@@@@@@@@ THE LINE ABOVE FAILS@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-			// Supposedly you're supposed to Add to a list and not just set the index equal to something.
-			// But I'm having trouble getting the syntax to access it.
-			// InitList is a list of Class Number with two properties: a bool and an int.
-			// How do you add a number to just the int property?
-			// InitList.number.Add(k+2); doesn't work.
-			// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-			InitList[k].marked = false; // Everything is unmarked at first.
-			}
+		// Our list starts at number 2. Everything is unmarked at first.
+		for(int k = 0; k < n - 1 ; k++) // n-1 because if you input 100 the program will output 101 as an answer
+			{ InitList.Add(new Number() {number= k+2 , marked = false}); }
 		return InitList;
 		}
 
@@ -65,8 +56,8 @@ public class SieveGenerator
 	public int Check(List<Number> TheList, int p)
 		{ 
 		int check = 0;
-		// The p is indexed as TheList[p-2].number
-		for (int w = TheList[p-1].number; w < TheList.Count; w++) // The init w is not unreachable because p always starts at 2.
+		// The p is TheList[p-2].number since we start our list at 2.
+		for (int w = p-1; w < TheList.Count; w++) // The init w is not unreachable because p always starts at 2.
 			{ 
 			if (TheList[w].marked == false);
 				{ 
@@ -112,11 +103,12 @@ public class SieveGenerator
 		}
 
 	//////////////////////////////////////////
-	// Print out the first n primes
+	// Print the primes up to number n.
 	public void PrintPrimes(int n)
 		{
 		List<int> ListOfPrimes = GetPrimes(n);
-		for (int z = 0; z < n; z++)
+		System.Console.WriteLine("The primes up to number {0} are:", n);
+		for (int z = 0; z < ListOfPrimes.Count ; z++)
 			{ System.Console.WriteLine(ListOfPrimes[z]); }
 		}
 
