@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 ////////////////////////////////////////////////
-class NumberOps
+public class NumberOps
 	{
 	/////////////////////////////////
 	public NumberOps()
@@ -49,7 +49,7 @@ class NumberOps
 
 	///////////////////////////////////////////////////////
 	// Return a list of the digits. 
-	List<int> GetDigits(int number)
+	public List<int> GetDigits(int number)
 		{
 		// Fill code to return a list of digits 
 		// For instance  the digit 1234 should return the list 1->2->3->4.
