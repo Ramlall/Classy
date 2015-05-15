@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 public class PrimeGeneratorTest
 	{
 	[TestMethod]
-	public void TestMethod1()
+	public void PrimeGTest()
 		{
 		PrimeGenerator gen=new PrimeGenerator();
 		
