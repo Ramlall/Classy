@@ -3,6 +3,7 @@ class Program
 	{
 	static void	Main(string[] args)
 		{
+		// Hi Steven.
 		///////////// FOR PRIMES ////////////////////
 		// Ask user how many primes they want.
 		System.Console.WriteLine("Please input the number you want to check up too. (Must be above 3.)");
